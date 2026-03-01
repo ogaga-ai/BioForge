@@ -181,6 +181,6 @@ class BioForgeMLOptimizer:
                 'LOO-RMSE': res['LOO-RMSE'],
                 'MAE (g/l)': res['MAE (g/l)'],
                 'SEP (%)': res['SEP (%)'],
-                'Best': '✓' if name == self.best_model_name else '',
+                'Best': '*' if name == self.best_model_name else '',
             })
         return pd.DataFrame(rows).sort_values('LOO-RMSE').reset_index(drop=True)

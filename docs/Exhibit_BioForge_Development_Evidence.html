@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Exhibit — BioForge Active Development Evidence</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 11pt; color: #1a1a1a; background: #fff; }
+  .page { max-width: 900px; margin: 0 auto; padding: 48px 56px; }
+
+  /* Exhibit title block */
+  .exhibit-banner { background: #1a4d8f; color: #fff; padding: 22px 28px; border-radius: 4px; margin-bottom: 28px; }
+  .exhibit-banner .label { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 6px; }
+  .exhibit-banner h1 { font-size: 17pt; font-weight: 700; line-height: 1.3; }
+  .exhibit-banner .sub { font-size: 10pt; margin-top: 8px; opacity: 0.85; }
+
+  .meta-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 10pt; }
+  .meta-table td { padding: 6px 12px; border: 1px solid #dde; }
+  .meta-table td:first-child { font-weight: 600; color: #1a4d8f; background: #f0f4ff; width: 32%; }
+
+  h2 { font-size: 13pt; color: #1a4d8f; border-bottom: 2px solid #1a4d8f; padding-bottom: 6px; margin: 30px 0 14px; }
+  h3 { font-size: 11pt; color: #1a4d8f; margin: 18px 0 8px; }
+  p  { line-height: 1.7; margin-bottom: 10px; }
+  ul { margin: 8px 0 12px 22px; }
+  li { margin-bottom: 6px; line-height: 1.65; }
+
+  .callout { background: #e8f4fd; border-left: 4px solid #1a4d8f; padding: 14px 18px; margin: 16px 0; border-radius: 0 4px 4px 0; }
+  .callout.green { background: #e8f5e9; border-color: #2e7d32; }
+  .callout-title { font-weight: 700; color: #1a4d8f; margin-bottom: 6px; font-size: 10.5pt; }
+  .callout.green .callout-title { color: #2e7d32; }
+
+  /* Evidence index table */
+  .evidence-table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 14px 0 24px; }
+  .evidence-table th { background: #1a4d8f; color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; }
+  .evidence-table td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .evidence-table tr:nth-child(even) td { background: #f7f9ff; }
+  .section-label { display: inline-block; background: #1a4d8f; color: #fff; padding: 2px 9px; border-radius: 10px; font-size: 8.5pt; font-weight: 700; white-space: nowrap; }
+  .file-path { font-family: "Courier New", monospace; font-size: 8.5pt; color: #455a64; background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+
+  /* Claim mapping */
+  .claim-row { border: 1px solid #dde; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; }
+  .claim-row .claim { font-weight: 700; color: #1a4d8f; margin-bottom: 6px; }
+  .claim-row .evidence { font-size: 10pt; color: #333; }
+  .claim-row .evidence span { color: #2e7d32; font-weight: 600; }
+
+  .doc-footer { margin-top: 48px; border-top: 2px solid #1a4d8f; padding-top: 14px; display: flex; justify-content: space-between; font-size: 8.5pt; color: #90a4ae; }
+  hr { border: none; border-top: 1px solid #dde; margin: 28px 0; }
+
+  @media print {
+    .exhibit-banner { background: #1a4d8f !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .evidence-table th { background: #1a4d8f !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-label { background: #1a4d8f !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- EXHIBIT TITLE -->
+<div class="exhibit-banner">
+  <div class="label">EB-2 National Interest Waiver Petition — Supporting Exhibit</div>
+  <h1>BioForge: Evidence of Active Development</h1>
+  <div class="sub">Petitioner: Ogaga Maxwell Okedi &nbsp;|&nbsp; Exhibit: BioForge Development Package &nbsp;|&nbsp; March 2026</div>
+</div>
+
+<table class="meta-table">
+  <tr><td>Petitioner</td><td>Ogaga Maxwell Okedi, M.S. Chemical Engineering, Florida A&amp;M University</td></tr>
+  <tr><td>Purpose of Exhibit</td><td>To demonstrate that BioForge — the integrated DOE + ML bioprocess optimization platform described in the petition — is currently in active development and is not merely a proposed plan, but a real, functional software system with working code, reproducible outputs, and a public version-controlled repository.</td></tr>
+  <tr><td>Petition Section</td><td>Prong II — Well Positioned to Advance the Proposed Endeavor (Section 3.4: Concrete Forward-Looking Research Plan)</td></tr>
+  <tr><td>Date Prepared</td><td>March 2026</td></tr>
+  <tr><td>GitHub Repository</td><td>https://github.com/ogaga-ai/BioForge (public, MIT license)</td></tr>
+</table>
+
+<!-- PURPOSE -->
+<h2>Purpose and Relevance to Petition</h2>
+<p>The petition asserts that Mr. Okedi is well-positioned to advance his proposed endeavor — specifically, that he has a concrete forward-looking research plan and demonstrated commitment to building BioForge, an integrated computational-experimental platform for optimizing domestic waste-to-value bioprocesses. Under <em>Matter of Dhanasar</em>, evidence that a petitioner is well-positioned includes not only past accomplishments but also demonstrated commitment through concrete steps already taken.</p>
+<p>This exhibit provides that evidence. It documents that BioForge is not a speculative future project, but a real software system currently in active development, with working code, a validated output tied directly to the petitioner's published research, and a public repository available to any U.S. institution that wishes to use or build upon it.</p>
+
+<div class="callout green">
+  <div class="callout-title">Core Statement for the Record</div>
+  BioForge is currently in active development. The core optimization engine has been prototyped, implemented in Python, and validated against experimental data from the petitioner's flagship peer-reviewed publication. The repository was initialized in March 2026, contains 15 source files and over 1,100 lines of working code, and is publicly accessible at <strong>https://github.com/ogaga-ai/BioForge</strong>. Every claim made about BioForge in the petition narrative corresponds to a specific implemented file or working output documented in this exhibit.
+</div>
+
+<hr />
+
+<!-- EVIDENCE INDEX -->
+<h2>Evidence Index — Six-Part Documentation Package</h2>
+<p>This exhibit is organized into six components, each addressing a specific aspect of BioForge's development. Together they establish that BioForge exists, works, and directly extends the petitioner's published research into a deployable national resource.</p>
+
+<table class="evidence-table">
+  <thead>
+    <tr>
+      <th width="8%">Part</th>
+      <th width="22%">Title</th>
+      <th width="35%">What It Contains</th>
+      <th width="35%">What It Proves</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="section-label">A</span></td>
+      <td><strong>Project Technical Overview</strong></td>
+      <td>10-section engineering report covering problem statement, BioForge solution, current development status, module specifications, technical stack, sample workflow, national benefit, and roadmap<br /><br /><span class="file-path">docs/BioForge_Project_Overview.html</span></td>
+      <td>BioForge is a structured, professionally documented engineering project — not a concept paper. The document identifies exactly which modules are implemented, which are in progress, and what the platform produces as output.</td>
+    </tr>
+    <tr>
+      <td><span class="section-label">B</span></td>
+      <td><strong>System Architecture Diagram</strong></td>
+      <td>Publication-quality block diagram showing all four BioForge modules: Input Layer, DOE Engine (Module 1), ML Modeling + Sensitivity + Optimization (Module 2), Separation Feasibility (Module 3), Scale-Up Assessment (Module 4), and Output Layer<br /><br /><span class="file-path">docs/generate_architecture_diagram.py</span><br /><span class="file-path">outputs/figures/BioForge_Architecture.png</span></td>
+      <td>BioForge has a defined, multi-module architecture — it is engineered as a system, not assembled ad hoc. The architecture reflects the same four-deliverable structure described in the petition narrative.</td>
+    </tr>
+    <tr>
+      <td><span class="section-label">C</span></td>
+      <td><strong>Technical Stack and Source Code</strong></td>
+      <td>Fully implemented Python modules:<br />
+      &bull; <span class="file-path">bioforge/optimization/doe_engine.py</span> — BBD, CCD, PBD matrix generation<br />
+      &bull; <span class="file-path">bioforge/optimization/ml_optimizer.py</span> — ANN, Random Forest, GBR, SVR with LOO-CV<br />
+      &bull; <span class="file-path">bioforge/reporting/protocol_card.py</span> — structured protocol card generator<br />
+      &bull; <span class="file-path">requirements.txt</span> — Python 3.11, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib</td>
+      <td>BioForge is implemented in real, working Python code using the exact technical stack described in the petition (Python, Scikit-learn, ANN/MLPRegressor, Random Forest). The code is not pseudocode or placeholder — it is executable and documented.</td>
+    </tr>
+    <tr>
+      <td><span class="section-label">D</span></td>
+      <td><strong>Sample Workflow Demonstration</strong></td>
+      <td>Complete Jupyter notebook applying BioForge to the published citric acid dataset:<br />
+      &bull; 17 experimental runs (Box-Behnken Design)<br />
+      &bull; 4 ML models trained and compared by LOO-CV<br />
+      &bull; Sensitivity analysis reproducing Sobol indices from published study<br />
+      &bull; Response surface contour map<br />
+      &bull; Global optimum identification<br />
+      &bull; Protocol card output<br /><br /><span class="file-path">notebooks/BioForge_CitricAcid_Optimization.ipynb</span><br /><span class="file-path">data/raw/citric_acid_doe_matrix.csv</span></td>
+      <td>BioForge is validated against real, published experimental data. The notebook reproduces the 49.1% yield improvement (28.90 → 43.08 g/l citric acid) reported in Exhibit 12.1. This directly ties BioForge's implementation to the petitioner's peer-reviewed published work — confirming the platform extends, not merely describes, his research.</td>
+    </tr>
+    <tr>
+      <td><span class="section-label">E</span></td>
+      <td><strong>GitHub Repository Evidence</strong></td>
+      <td>Public version-controlled repository at <strong>https://github.com/ogaga-ai/BioForge</strong><br /><br />
+      &bull; 2 commits as of March 2026<br />
+      &bull; Sole author: Ogaga Maxwell Okedi<br />
+      &bull; 15 source files, 1,151 lines of code<br />
+      &bull; MIT license — open to all U.S. institutions<br />
+      &bull; README documenting purpose, usage, and development roadmap<br /><br />
+      <em>See attached screenshot of repository commit history</em></td>
+      <td>BioForge has a verifiable public existence with a timestamped, author-attributed commit history. The repository can be independently accessed, cloned, and run by any reviewer, institution, or USCIS officer. This is the clearest possible evidence that the work exists beyond narrative.</td>
+    </tr>
+    <tr>
+      <td><span class="section-label">F</span></td>
+      <td><strong>Notebook Output — Protocol Card</strong></td>
+      <td>Generated output from running the BioForge demonstration notebook:<br />
+      &bull; Figures: EDA scatter plots, predicted vs. actual, sensitivity bar chart, response surface contour map<br />
+      &bull; Protocol card: optimal conditions, predicted yield (+49.1%), factor sensitivity ranking, reproducibility note<br /><br /><span class="file-path">outputs/figures/eda_scatter.png</span><br /><span class="file-path">outputs/figures/model_validation.png</span><br /><span class="file-path">outputs/figures/sensitivity_analysis.png</span><br /><span class="file-path">outputs/figures/response_surface.png</span><br /><span class="file-path">outputs/reports/BioForge_CitricAcid_Protocol_Card.txt</span></td>
+      <td>BioForge produces real, actionable output — not just code. The protocol card generated by the platform is the type of document that any U.S. lab or manufacturer would receive when running their waste stream through BioForge, demonstrating that the platform's deliverables are functional and implementation-ready.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<!-- CLAIM MAPPING -->
+<h2>Petition Claim — Evidence Mapping</h2>
+<p>Each specific assertion made about BioForge in the petition narrative is supported by a directly corresponding item in this exhibit. The table below maps petition claims to their evidence.</p>
+
+<div class="claim-row">
+  <div class="claim">"BioForge is currently in active development."</div>
+  <div class="evidence">Supported by: <span>Part E</span> — public GitHub repository initialized March 2026 with timestamped commits attributed solely to the petitioner; <span>Part A</span> — project overview explicitly documenting completed vs. in-progress modules.</div>
+</div>
+
+<div class="claim-row">
+  <div class="claim">"The optimization engine module has been prototyped and tested using data from the published citric acid study."</div>
+  <div class="evidence">Supported by: <span>Part D</span> — Jupyter notebook loading all 17 runs from the published Box-Behnken Design, training 4 ML models, and reproducing the 49.1% yield improvement; <span>Part F</span> — protocol card and figures generated as direct output of that validation run.</div>
+</div>
+
+<div class="claim-row">
+  <div class="claim">"BioForge combines Design of Experiments with advanced machine learning methods, including Artificial Neural Networks."</div>
+  <div class="evidence">Supported by: <span>Part C</span> — <code>ml_optimizer.py</code> implements ANN (MLPRegressor, tanh activation, MFFF architecture matching published study), Random Forest, Gradient Boosting, and SVR; <span>Part C</span> — <code>doe_engine.py</code> implements Box-Behnken, Central Composite, and Plackett-Burman designs.</div>
+</div>
+
+<div class="claim-row">
+  <div class="claim">"BioForge is substrate-agnostic and product-agnostic — any U.S. institution can run it on their own waste stream."</div>
+  <div class="evidence">Supported by: <span>Part C</span> — code accepts any user-defined factor names, ranges, and experimental data; <span>Part D</span> — notebook summary section explicitly states the pipeline applies to corn stover → succinic acid, bagasse → lactic acid, and any other substrate/product combination; <span>Part E</span> — MIT license with no usage restrictions.</div>
+</div>
+
+<div class="claim-row">
+  <div class="claim">"BioForge will produce optimization protocols replicable by any U.S. lab or manufacturer independently."</div>
+  <div class="evidence">Supported by: <span>Part F</span> — protocol card output contains all conditions, metrics, and reproducibility notes enabling independent implementation; <span>Part C</span> — <code>protocol_card.py</code> includes explicit reproducibility statement linking to public GitHub repository in every generated card.</div>
+</div>
+
+<div class="claim-row">
+  <div class="claim">"Mr. Okedi's enrollment in the M.S. Computer Science program at UT Dallas is the deliberate next step toward building and deploying BioForge."</div>
+  <div class="evidence">Supported by: <span>Part B</span> — architecture diagram shows the web interface and process simulation modules (planned for Stage 2) require software engineering depth beyond what chemical engineering training alone provides; <span>Part A</span> — roadmap aligns CS program completion (2029) with BioForge v2.0 web deployment milestone.</div>
+</div>
+
+<hr />
+
+<!-- HOW TO VERIFY -->
+<h2>How to Independently Verify BioForge</h2>
+<p>Any reviewer may independently verify the existence and functionality of BioForge using the following steps:</p>
+<ul>
+  <li><strong>View the repository:</strong> Navigate to <strong>https://github.com/ogaga-ai/BioForge</strong> in any web browser. The commit history, file structure, source code, and README are publicly accessible without an account.</li>
+  <li><strong>Verify authorship:</strong> All commits are attributed to Ogaga Maxwell Okedi. The commit timestamp confirms repository creation in March 2026.</li>
+  <li><strong>Run the demonstration:</strong> Clone the repository, install dependencies (<code>pip install -r requirements.txt</code>), and run the Jupyter notebook (<code>notebooks/BioForge_CitricAcid_Optimization.ipynb</code>). The notebook will reproduce the citric acid optimization workflow and generate protocol card output.</li>
+  <li><strong>Inspect the source code:</strong> All Python modules in <code>bioforge/</code> are documented, executable, and written in standard Python 3.11 using widely available open-source libraries.</li>
+</ul>
+
+<div class="callout">
+  <div class="callout-title">Note on Development Stage</div>
+  BioForge is deliberately documented as a prototype (v0.1) rather than a finished product. This accurately reflects the early-career stage of Mr. Okedi's proposed endeavor. The petition does not claim that BioForge is complete — it claims that Mr. Okedi has begun building it and is well-positioned to complete it. This exhibit provides exactly that evidence: a real, working foundation that proves the work has started, the methodology is sound, and the deliverables are achievable.
+</div>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <div>BioForge Development Evidence | Ogaga Maxwell Okedi | EB-2 NIW Petition Exhibit</div>
+  <div>March 2026</div>
+</div>
+
+</div>
+</body>
+</html>
