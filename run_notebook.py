@@ -186,18 +186,22 @@ BASELINE_YIELD = 28.90
 pred_yield     = optimum['predicted_yield_g_per_l']
 improvement    = (pred_yield - BASELINE_YIELD) / BASELINE_YIELD * 100
 
+PUBLISHED_YIELD    = 43.08   # g/l — experimentally validated in Okedi et al. 2024
+PUBLISHED_REF      = 'Okedi et al. (2024) Industrial Crops and Products IF 6.2'
+
 print('\n' + '=' * 55)
-print('  BIOFORGE OPTIMUM — CITRIC ACID PRODUCTION')
+print('  BIOFORGE OPTIMUM - CITRIC ACID PRODUCTION')
 print('=' * 55)
 for factor, value in optimum['optimal_conditions'].items():
     print(f'  {factor:<35}: {value}')
 print()
 print(f'  Baseline yield (no stimulants)   : {BASELINE_YIELD:.2f} g/l')
-print(f'  BioForge predicted optimum       : {pred_yield:.2f} g/l')
-print(f'  Improvement                      : +{improvement:.1f}%')
+print(f'  BioForge ML-predicted optimum    : {pred_yield:.2f} g/l')
+print(f'  Predicted improvement            : +{improvement:.1f}%')
 print()
-print(f'  Published experimental validation: 43.08 g/l (+49.1%)')
-print(f'  Best model R²                    : {results[optimizer.best_model_name]["R²"]:.5f}')
+print(f'  Published experimental result    : {PUBLISHED_YIELD:.2f} g/l (+49.1%)')
+print(f'  (Okedi et al. 2024 - ANFIS model, lab-validated)')
+print(f'  Best model R2                    : {results[optimizer.best_model_name]["R²"]:.5f}')
 print('=' * 55)
 
 # ── 8. Protocol card ────────────────────────────────────────
@@ -223,6 +227,8 @@ card = ProtocolCard(
     r2=results[optimizer.best_model_name]['R²'],
     rmse=results[optimizer.best_model_name]['RMSE (g/l)'],
     sensitivity_df=sensitivity,
+    published_yield=PUBLISHED_YIELD,
+    published_ref=PUBLISHED_REF,
 )
 
 card.save('outputs/reports/BioForge_CitricAcid_Protocol_Card.txt')

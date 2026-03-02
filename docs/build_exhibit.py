@@ -236,6 +236,29 @@ html = f"""<!DOCTYPE html>
 
 <pre class="protocol-card">{card_txt}</pre>
 
+<div class="callout" style="border-color:#b71c1c; background:#fce4ec; margin-top:20px;">
+  <div class="callout-title" style="color:#b71c1c;">Reconciliation: Two Different Numbers, Two Different Things</div>
+  <p style="margin-bottom:10px;">The petition cites <strong>49.1% improvement (28.90 to 43.08 g/l)</strong>. The protocol card above shows <strong>+36.1% (39.32 g/l)</strong>. These are not inconsistent. They measure two entirely different things:</p>
+  <table style="width:100%;border-collapse:collapse;font-size:9.5pt;">
+    <tr style="background:#f8d7da;">
+      <th style="padding:7px 12px;text-align:left;border:1px solid #f5c6cb;color:#721c24;">Figure</th>
+      <th style="padding:7px 12px;text-align:left;border:1px solid #f5c6cb;color:#721c24;">Source</th>
+      <th style="padding:7px 12px;text-align:left;border:1px solid #f5c6cb;color:#721c24;">What it represents</th>
+    </tr>
+    <tr>
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;font-weight:700;">43.08 g/l, +49.1%</td>
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;">Okedi et al. (2024) published paper</td>
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;">Actual laboratory measurement. The experiment was physically run at the ANFIS-model-identified optimal conditions and this yield was measured in the lab.</td>
+    </tr>
+    <tr style="background:#fff5f5;">
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;font-weight:700;">39.32 g/l, +36.1%</td>
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;">BioForge protocol card (above)</td>
+      <td style="padding:7px 12px;border:1px solid #f5c6cb;">ML model prediction. BioForge's SVR model estimates the yield at the conditions it identifies as optimal within the design space. No laboratory run has been conducted at these conditions yet.</td>
+    </tr>
+  </table>
+  <p style="margin-top:12px;">The relationship is direct: the published experimental result (43.08 g/l) is the outcome that BioForge's methodology is designed to replicate and extend. BioForge achieves R2 = 0.99883 on the same training data as the published ANN, confirming identical modeling accuracy. The petitioner's Stage 1b work involves running BioForge-predicted conditions in the laboratory to generate new validated experimental results for U.S. waste streams.</p>
+</div>
+
 <hr />
 
 <!-- CLAIM MAPPING -->
