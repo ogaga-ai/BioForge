@@ -136,8 +136,8 @@ ax.set_title(
     '(Permutation Importance — matches Sobol indices from published study)',
     fontsize=11
 )
-for bar, val in zip(bars, sensitivity['Importance (%)']):
-    ax.text(bar.get_width() + 0.5, bar.get_y() + bar.get_height()/2,
+for bar, val, err in zip(bars, sensitivity['Importance (%)'], sensitivity['Std Dev'] * 100):
+    ax.text(val + err + 1.8, bar.get_y() + bar.get_height()/2,
             f'{val:.1f}%', va='center', fontsize=10, fontweight='bold')
 ax.grid(True, alpha=0.3, axis='x')
 plt.tight_layout()

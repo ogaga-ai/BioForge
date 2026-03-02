@@ -1,5 +1,5 @@
 """
-BioForge System Architecture Diagram — AWS-Style
+BioForge System Architecture Diagram - AWS-Style
 -------------------------------------------------
 Generates a professional block diagram using the AWS-architecture
 visual language: colored icon boxes, grid background, labeled arrows,
@@ -16,7 +16,7 @@ import matplotlib.patches as mpatches
 from matplotlib.patches import FancyBboxPatch
 import numpy as np
 
-# ── Palette ──────────────────────────────────────────────────────────────────
+# --- Palette ---
 BLUE   = '#1565C0'   # primary compute / pipeline
 DKBLUE = '#0D47A1'   # dark blue (git, version control)
 PURPLE = '#6A1B9A'   # orchestration / interface
@@ -28,7 +28,7 @@ LGRAY  = '#ECEFF1'   # page background
 GRID   = '#DDE1E8'   # grid lines
 WHITE  = '#FFFFFF'
 
-# ── Figure ───────────────────────────────────────────────────────────────────
+# --- Figure ---
 fig, ax = plt.subplots(figsize=(16, 10))
 W, H = 16, 10
 ax.set_xlim(0, W)
@@ -43,7 +43,7 @@ for x in np.arange(0, W + 0.5, 0.5):
 for y in np.arange(0, H + 0.5, 0.5):
     ax.axhline(y, color=GRID, lw=0.5, zorder=0)
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# --- Helpers ---
 SZ = 0.78   # default node square size
 
 
@@ -97,18 +97,18 @@ def group_box(x0, y0, x1, y1, label='', color=BLUE):
                 color=color, fontweight='700', zorder=4)
 
 
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
 # TITLE
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
 ax.text(W / 2, H - 0.25, 'BioForge Platform Architecture',
         ha='center', va='top', fontsize=17, fontweight='bold', color=DKBLUE)
 ax.text(W / 2, H - 0.72,
         'Integrated DOE + ML Bioprocess Optimization Framework  |  v0.1',
         ha='center', va='top', fontsize=9.5, color=GRAY)
 
-# ════════════════════════════════════════════════════════════════════════════
-# ROW 1 (y = 8.0)  —  BioForge Development CI/CD Stack
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
+# ROW 1 (y = 8.0) - BioForge Development CI/CD Stack
+# =============================================================================
 Y1 = 8.0
 group_box(2.4, 7.45, 12.6, 8.55, 'BioForge Development & Version Control', BLUE)
 
@@ -128,9 +128,9 @@ arrow(11.09, Y1, 12.81, Y1, 'Publish')
 # Release Deploy arrow down to BioForge Interface (Row 3)
 arrow(10.7, 7.61, 10.7, 6.39, 'Deploy', ORANGE, label_offset=(0.30, 0))
 
-# ════════════════════════════════════════════════════════════════════════════
-# ROW 2 (y = 5.8)  —  Core Optimization Pipeline
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
+# ROW 2 (y = 5.8) - Core Optimization Pipeline
+# =============================================================================
 Y2 = 5.8
 
 node(1.1, Y2, 'DATA', 'Experimental\nData (CSV)', GREEN)
@@ -151,24 +151,24 @@ node(14.4, Y2, 'DB',  'Results\nStore',        GREEN)
 
 arrow(1.49, Y2, 3.05, Y2, 'Input data')
 arrow(3.95, Y2, 5.05, Y2, 'DOE matrix')
-arrow(4.00, 6.05, 5.30, 6.20, '')   # DOE -> ANN
-arrow(4.00, 5.55, 5.30, 5.30, '')   # DOE -> GBR
+arrow(4.00, 6.05, 5.30, 6.20, '')
+arrow(4.00, 5.55, 5.30, 5.30, '')
 arrow(8.55, Y2,   9.61, Y2,  'Predictions')
 arrow(10.39, Y2,  11.61, Y2, 'Rankings')
 arrow(12.39, Y2,  14.01, Y2, 'Store')
 
-# ════════════════════════════════════════════════════════════════════════════
-# LEFT COLUMN  —  Researcher (Client equivalent)
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
+# LEFT COLUMN - Researcher (Client equivalent)
+# =============================================================================
 Y3 = 3.5
 node(1.1, Y3, 'USER', 'Researcher /\nManufacturer', DGRAY)
 
 arrow(1.1, 3.89, 1.1, 5.41, 'Provides\ndata', DGRAY, label_offset=(-0.50, 0))
 arrow(1.49, Y3, 3.11, Y3, 'Configure &\nrun analysis')
 
-# ════════════════════════════════════════════════════════════════════════════
-# ROW 3 (y = 3.5)  —  BioForge Interface + Output Generators
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
+# ROW 3 (y = 3.5) - BioForge Interface + Output Generators
+# =============================================================================
 node(3.5,  Y3, 'CLI',  'BioForge\nInterface', PURPLE)
 node(6.2,  Y3, 'P.C.', 'Protocol Card\nGenerator', ORANGE)
 node(9.0,  Y3, 'FIG',  'Figure\nGenerator',   ORANGE)
@@ -178,7 +178,7 @@ arrow(3.89, Y3, 5.81, Y3, 'Optimal conditions')
 arrow(6.59, Y3, 8.61, Y3, 'Trigger plots')
 arrow(9.39, Y3, 11.61, Y3, 'Commit outputs')
 
-# BioForge Interface --> DOE Engine (configure run)
+# BioForge Interface -> DOE Engine (configure run)
 arrow(3.5, 3.89, 3.5, 5.35, 'Configure\nDOE run', PURPLE, label_offset=(0.52, 0))
 
 # Sensitivity -> Protocol Card Gen (diagonal)
@@ -193,9 +193,9 @@ arrow(14.4, 5.41, 9.40, 3.89,
 arrow(10.7, 6.39, 3.89, 3.72, 'Updated\nplatform', ORANGE,
       rad=0.25, label_offset=(0.4, 0.32))
 
-# ════════════════════════════════════════════════════════════════════════════
-# ROW 4 (y = 1.55)  —  Final output artifacts
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
+# ROW 4 (y = 1.55) - Final output artifacts
+# =============================================================================
 Y4 = 1.55
 node(3.5,  Y4, '.TXT', 'Protocol Card\nOutput (.txt)', GREEN)
 node(6.5,  Y4, '.PNG', 'Output Figures\n(4 x PNG)',    GREEN)
@@ -207,13 +207,13 @@ arrow(6.2,  3.11, 6.5,  1.94, '', ORANGE)
 arrow(9.0,  3.11, 9.5,  1.94, '', ORANGE)
 arrow(12.0, 3.11, 12.5, 1.94, '', GREEN)
 
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
 # FOOTER
-# ════════════════════════════════════════════════════════════════════════════
+# =============================================================================
 ax.text(
     W / 2, 0.42,
     '"Any U.S. lab or manufacturer can run any waste stream through BioForge '
-    'and receive actionable optimization results — independently."',
+    'and receive actionable optimization results - independently."',
     ha='center', va='center', fontsize=8.5, color=GRAY, style='italic',
     bbox=dict(boxstyle='round,pad=0.32', facecolor=WHITE,
               edgecolor='#b0bec5', alpha=0.75), zorder=4
